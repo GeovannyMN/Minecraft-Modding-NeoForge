@@ -1,6 +1,7 @@
 package net.galak.vohasar;
 
 import net.galak.vohasar.block.ModBlocks;
+import net.galak.vohasar.item.ModCreativeModeTabs;
 import net.galak.vohasar.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -31,6 +32,8 @@ public class Vohasar {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
@@ -47,17 +50,7 @@ public class Vohasar {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.VOHASARITE);
-            event.accept(ModItems.RAW_VOHASARITE);
-        }
-        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.VOHASARITE_BLOCK);
-            event.accept(ModBlocks.RAW_VOHASARITE_BLOCK);
-            event.accept(ModBlocks.VOHASARITE_ORE);
-            event.accept(ModBlocks.VOHASARITE_NETHER_ORE);
-            event.accept(ModBlocks.VOHASARITE_END_ORE);
-        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

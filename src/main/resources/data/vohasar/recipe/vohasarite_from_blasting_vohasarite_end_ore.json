@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 25,
+  "experience": 1.25,
+  "group": "vohasarite",
+  "ingredient": {
+    "item": "vohasarpro:vohasarite_end_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "vohasarpro:vohasarite"
+  }
+}

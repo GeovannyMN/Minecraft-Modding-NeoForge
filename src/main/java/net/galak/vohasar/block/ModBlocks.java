@@ -29,8 +29,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> VOHASARITE_ORE = registerBlock("vohasarite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,5),
                     BlockBehaviour.Properties.of()
-                            .strength(2f).requiresCorrectToolForDrops()
+                            .strength(1f).requiresCorrectToolForDrops()
                             .sound(SoundType.STONE)));
+
+    public static final DeferredBlock<Block> VOHASARITE_DEEPSLATE_ORE = registerBlock("vohasarite_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3,5),
+                    BlockBehaviour.Properties.of()
+                            .strength(2f).requiresCorrectToolForDrops()
+                            .sound(SoundType.DEEPSLATE)));
 
     public static final DeferredBlock<Block> VOHASARITE_NETHER_ORE = registerBlock("vohasarite_nether_ore",
             () -> new DropExperienceBlock(UniformInt.of(4,6),
@@ -42,11 +48,11 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(5,7),
                     BlockBehaviour.Properties.of()
                             .strength(1f).requiresCorrectToolForDrops()
-                            .sound(SoundType.GLOW_LICHEN)));
+                            .sound(SoundType.STONE)));
 
     public static final DeferredBlock<Block> RAW_VOHASARITE_BLOCK = registerBlock("raw_vohasarite_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops()
+                    .strength(2f).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST_CLUSTER)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

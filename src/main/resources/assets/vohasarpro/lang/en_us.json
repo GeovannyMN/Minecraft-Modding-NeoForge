@@ -5,6 +5,10 @@
   "block.vohasarpro.vohasarite_block": "Vohasarite Block",
   "block.vohasarpro.raw_vohasarite_block": "Raw Vohasarite Block",
   "block.vohasarpro.vohasarite_ore": "Vohasarite Ore",
+  "block.vohasarpro.vohasarite_deepslate_ore": "Vohasarite Deepslate Ore",
   "block.vohasarpro.vohasarite_nether_ore": "Vohasarite Nether Ore",
-  "block.vohasarpro.vohasarite_end_ore": "Vohasarite End Ore"
+  "block.vohasarpro.vohasarite_end_ore": "Vohasarite End Ore",
+
+  "creativetab.vohasarpro.vohasar_items": "Vohasar Items",
+  "creativetab.vohasarpro.vohasar_blocks": "Vohasar Blocks"
 }

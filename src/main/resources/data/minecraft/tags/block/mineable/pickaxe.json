@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "vohasarpro:vohasarite_block",
+    "vohasarpro:raw_vohasarite_block",
+    "vohasarpro:vohasarite_ore",
+    "vohasarpro:vohasarite_deepslate_ore",
+    "vohasarpro:vohasarite_nether_ore",
+    "vohasarpro:vohasarite_end_ore"
+  ]
+}
