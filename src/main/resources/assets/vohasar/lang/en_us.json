@@ -1,0 +1,13 @@
+{
+  "itemGroup.vohasar": "Example Mod Tab",
+  "block.vohasar.example_block": "Example Block",
+  "item.vohasar.example_item": "Example Item",
+
+  "vohasar.configuration.title": "Vohasar Configs",
+  "vohasar.configuration.section.vohasar.common.toml": "Vohasar Configs",
+  "vohasar.configuration.section.vohasar.common.toml.title": "Vohasar Configs",
+  "vohasar.configuration.items": "Item List",
+  "vohasar.configuration.logDirtBlock": "Log Dirt Block",
+  "vohasar.configuration.magicNumberIntroduction": "Magic Number Text",
+  "vohasar.configuration.magicNumber": "Magic Number"
+}
