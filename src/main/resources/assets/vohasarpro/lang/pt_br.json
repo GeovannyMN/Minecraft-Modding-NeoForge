@@ -1,0 +1,10 @@
+{
+  "item.vohasarpro.vohasarite": "Vohasarita",
+  "item.vohasarpro.raw_vohasarite": "Vohasarita Crua",
+
+  "block.vohasarpro.vohasarite_block": "Bloco de Vohasarita",
+  "block.vohasarpro.raw_vohasarite_block": "Bloco de Vohasarita Crua",
+  "block.vohasarpro.vohasarite_ore": "Minério de Vohasarita",
+  "block.vohasarpro.vohasarite_nether_ore": "Minério de Vohasarita do Nether",
+  "block.vohasarpro.vohasarite_end_ore": "Minério de Vohasarita do End"
+}
