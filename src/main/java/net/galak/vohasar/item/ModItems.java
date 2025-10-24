@@ -1,6 +1,7 @@
 package net.galak.vohasar.item;
 
 import net.galak.vohasar.Vohasar;
+import net.galak.vohasar.item.custom.ChiselItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -15,6 +16,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_VOHASARITE = ITEMS.register("raw_vohasarite",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<ChiselItem> CHISEL = ITEMS.register("chisel",
+            () -> new ChiselItem(new Item.Properties().durability(64)));
 
     public static void register(IEventBus eventBus)
     {

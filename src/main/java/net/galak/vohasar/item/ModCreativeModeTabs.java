@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                             (itemDisplayParameters, output) -> {
                                 output.accept(ModItems.VOHASARITE);
                                 output.accept(ModItems.RAW_VOHASARITE);
+                                output.accept(ModItems.CHISEL);
                             }
                     )
                     .build());
