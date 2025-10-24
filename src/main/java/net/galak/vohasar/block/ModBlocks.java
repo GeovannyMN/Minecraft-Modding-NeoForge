@@ -2,6 +2,7 @@ package net.galak.vohasar.block;
 
 
 import net.galak.vohasar.Vohasar;
+import net.galak.vohasar.block.custom.MagicalBlock;
 import net.galak.vohasar.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -54,6 +55,12 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2f).requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST_CLUSTER)));
+
+    public static final DeferredBlock<MagicalBlock> MAGICAL_BLOCK = registerBlock("magical_block",
+            () -> new MagicalBlock(BlockBehaviour.Properties.of()
+                    .strength(0f).requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHER_BRICKS)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "vohasar_ashes",
+  "ingredient": {
+    "item": "vohasarpro:chocolated_milk"
+  },
+  "result": {
+    "count": 1,
+    "id": "vohasarpro:vohasar_ashes"
+  }
+}

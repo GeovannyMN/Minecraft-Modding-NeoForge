@@ -26,6 +26,10 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.VOHASARITE);
                                 output.accept(ModItems.RAW_VOHASARITE);
                                 output.accept(ModItems.CHISEL);
+                                output.accept(ModItems.GUARANA);
+                                output.accept(ModItems.CHOCOLATED_MILK);
+                                output.accept(ModItems.VOHASAR_CHARCOAL);
+                                output.accept(ModItems.VOHASAR_ASHES);
                             }
                     )
                     .build());
@@ -43,6 +47,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.VOHASARITE_DEEPSLATE_ORE);
                                 output.accept(ModBlocks.VOHASARITE_NETHER_ORE);
                                 output.accept(ModBlocks.VOHASARITE_END_ORE);
+                                output.accept(ModBlocks.MAGICAL_BLOCK);
                             }
                     )
                     .build());

@@ -2,6 +2,10 @@
   "item.vohasarpro.vohasarite": "Vohasarita",
   "item.vohasarpro.raw_vohasarite": "Vohasarita Crua",
   "item.vohasarpro.chisel": "Chisel/Formão",
+  "item.vohasarpro.guarana": "Guaraná",
+  "item.vohasarpro.chocolated_milk": "Leite Achocolatado",
+  "item.vohasarpro.vohasar_charcoal": "Carvão Vegetal de Vohasar",
+  "item.vohasarpro.vohasar_ashes": "Cinzas de Vohasar",
 
   "block.vohasarpro.vohasarite_block": "Bloco de Vohasarita",
   "block.vohasarpro.raw_vohasarite_block": "Bloco de Vohasarita Crua",
@@ -9,6 +13,7 @@
   "block.vohasarpro.vohasarite_deepslate_ore": "Minério de Vohasarita de Aldoabissal",
   "block.vohasarpro.vohasarite_nether_ore": "Minério de Vohasarita do Nether",
   "block.vohasarpro.vohasarite_end_ore": "Minério de Vohasarita do End",
+  "block.vohasarpro.magical_block": "Bloco Mágico",
 
   "creativetab.vohasarpro.vohasar_items": "Itens de Vohasar",
   "creativetab.vohasarpro.vohasar_blocks": "Blocos de Vohasar"

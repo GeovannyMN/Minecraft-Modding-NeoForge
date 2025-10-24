@@ -1,0 +1,10 @@
+{
+  "values": {
+    "vohasarpro:vohasar_ashes": {
+      "burn_time": 1600
+    },
+    "vohasarpro:vohasar_charcoal": {
+      "burn_time": 1200
+    }
+  }
+}
