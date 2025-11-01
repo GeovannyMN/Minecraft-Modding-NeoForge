@@ -16,5 +16,9 @@
   "block.vohasarpro.magical_block": "Bloco Mágico",
 
   "creativetab.vohasarpro.vohasar_items": "Itens de Vohasar",
-  "creativetab.vohasarpro.vohasar_blocks": "Blocos de Vohasar"
+  "creativetab.vohasarpro.vohasar_blocks": "Blocos de Vohasar",
+
+  "tooltip.vohasarpro.magical_block.tooltip": "Um bloco realmente §9MÁGICO§r",
+  "tooltip.vohasarpro.chisel": "Um item para §6MUDAR§r outros! Pressione §eShift§r para ver mais informação",
+  "tooltip.vohasarpro.chisel.shift_down": "Pode §6MUDAR§r blocos em sua versões de tijolos"
 }

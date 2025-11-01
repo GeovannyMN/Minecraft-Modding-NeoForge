@@ -16,5 +16,9 @@
   "block.vohasarpro.magical_block": "Magical Block",
 
   "creativetab.vohasarpro.vohasar_items": "Vohasar Items",
-  "creativetab.vohasarpro.vohasar_blocks": "Vohasar Blocks"
+  "creativetab.vohasarpro.vohasar_blocks": "Vohasar Blocks",
+
+  "tooltip.vohasarpro.magical_block.tooltip": "A really §9MAGICAL§r block",
+  "tooltip.vohasarpro.chisel": "A item to §6CHANGE§r others! Press §eShift§r for more information",
+  "tooltip.vohasarpro.chisel.shift_down": "Can §6CHANGE§r blocks in your bricks version"
 }
