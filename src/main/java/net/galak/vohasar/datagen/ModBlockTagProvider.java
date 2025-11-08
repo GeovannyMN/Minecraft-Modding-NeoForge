@@ -35,5 +35,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.VOHASARITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.VOHASARITE_NETHER_ORE.get())
                 .add(ModBlocks.VOHASARITE_END_ORE.get());
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.VOHASARITE_FENCE.get());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.VOHASARITE_FENCE_GATE.get());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.VOHASARITE_WALL.get());
     }
 }

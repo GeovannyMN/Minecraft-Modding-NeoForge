@@ -15,6 +15,16 @@
   "block.vohasarpro.vohasarite_end_ore": "Vohasarite End Ore",
   "block.vohasarpro.magical_block": "Magical Block",
 
+  "block.vohasarpro.vohasarite_stair": "Vohasarite Stair",
+  "block.vohasarpro.vohasarite_slab": "Vohasarite Slab",
+  "block.vohasarpro.vohasarite_pressure_plate": "Vohasarite Pressute Plate",
+  "block.vohasarpro.vohasarite_button": "Vohasarite Button",
+  "block.vohasarpro.vohasarite_fence": "Vohasarite Fence",
+  "block.vohasarpro.vohasarite_fence_gate": "Vohasarite Fence Gate",
+  "block.vohasarpro.vohasarite_wall": "Vohasarite Wall",
+  "block.vohasarpro.vohasarite_door": "Vohasarite Door",
+  "block.vohasarpro.vohasarite_trapdoor": "Vohasarite Trapdoor",
+
   "creativetab.vohasarpro.vohasar_items": "Vohasar Items",
   "creativetab.vohasarpro.vohasar_blocks": "Vohasar Blocks",
 

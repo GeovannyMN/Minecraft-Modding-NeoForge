@@ -5,6 +5,7 @@ import net.galak.vohasar.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
@@ -58,5 +59,25 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreBlasting(recipeOutput, VOHASARITE_SMEALTABLES, RecipeCategory.MISC,
                 ModItems.VOHASARITE.get(), 0.5f, 125, "vohasarite");
+
+        stairBuilder(ModBlocks.VOHASARITE_STAIR.get(), Ingredient.of(ModItems.VOHASARITE))
+                .group("vohasarite").unlockedBy("has_vohasarite", has(ModItems.VOHASARITE)).save(recipeOutput);
+
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOHASARITE_SLAB.get(), ModItems.VOHASARITE.get());
+
+        buttonBuilder(ModBlocks.VOHASARITE_BUTTON.get(), Ingredient.of(ModItems.VOHASARITE.get())).group("vohasarite")
+                .unlockedBy("has_vohasarite", has(ModItems.VOHASARITE.get())).save(recipeOutput);
+        pressurePlate(recipeOutput, ModBlocks.VOHASARITE_PRESSURE_PLATE.get(), ModItems.VOHASARITE.get());
+
+        fenceBuilder(ModBlocks.VOHASARITE_FENCE.get(), Ingredient.of(ModItems.VOHASARITE.get())).group("vohasarite")
+                .unlockedBy("has_vohasarite", has(ModItems.VOHASARITE.get())).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.VOHASARITE_FENCE_GATE.get(), Ingredient.of(ModItems.VOHASARITE.get())).group("vohasarite")
+                .unlockedBy("has_vohasarite", has(ModItems.VOHASARITE.get())).save(recipeOutput);
+        wall(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.VOHASARITE_WALL.get(), ModItems.VOHASARITE.get());
+
+        doorBuilder(ModBlocks.VOHASARITE_DOOR.get(), Ingredient.of(ModItems.VOHASARITE.get())).group("vohasarite")
+                .unlockedBy("has_vohasarite", has(ModItems.VOHASARITE.get())).save(recipeOutput);
+        trapdoorBuilder(ModBlocks.VOHASARITE_TRAPDOOR.get(), Ingredient.of(ModItems.VOHASARITE.get())).group("vohasarite")
+                .unlockedBy("has_vohasarite", has(ModItems.VOHASARITE.get())).save(recipeOutput);
     }
 }

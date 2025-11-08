@@ -30,9 +30,25 @@ public class MobBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.MAGICAL_BLOCK.get());
         dropSelf(ModBlocks.RAW_VOHASARITE_BLOCK.get());
 
+        dropSelf(ModBlocks.VOHASARITE_STAIR.get());
+
+        add(ModBlocks.VOHASARITE_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.VOHASARITE_SLAB.get()));
+
+        dropSelf(ModBlocks.VOHASARITE_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.VOHASARITE_BUTTON.get());
+
+        dropSelf(ModBlocks.VOHASARITE_FENCE.get());
+        dropSelf(ModBlocks.VOHASARITE_FENCE_GATE.get());
+        dropSelf(ModBlocks.VOHASARITE_WALL.get());
+        dropSelf(ModBlocks.VOHASARITE_TRAPDOOR.get());
+
         add(ModBlocks.VOHASARITE_ORE.get(),
                 block -> createOreDrop(ModBlocks.VOHASARITE_ORE.get(),
                         ModItems.RAW_VOHASARITE.get()));
+
+        add(ModBlocks.VOHASARITE_DOOR.get()
+        , block -> createDoorTable(ModBlocks.VOHASARITE_DOOR.get()));
 
         add(ModBlocks.VOHASARITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrop(ModBlocks.VOHASARITE_DEEPSLATE_ORE.get(),

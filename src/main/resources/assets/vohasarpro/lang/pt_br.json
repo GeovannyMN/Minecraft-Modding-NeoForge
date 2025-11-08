@@ -15,6 +15,16 @@
   "block.vohasarpro.vohasarite_end_ore": "Minério de Vohasarita do End",
   "block.vohasarpro.magical_block": "Bloco Mágico",
 
+  "block.vohasarpro.vohasarite_stair": "Escada de Vohasarita",
+  "block.vohasarpro.vohasarite_slab": "Meio-bloco de Vohasarita",
+  "block.vohasarpro.vohasarite_pressure_plate": "Placa de Pressão de Vohasarita",
+  "block.vohasarpro.vohasarite_button": "Botão de Vohasarita",
+  "block.vohasarpro.vohasarite_fence": "Cerca de Vohasarita",
+  "block.vohasarpro.vohasarite_fence_gate": "Portão de Vohasarita",
+  "block.vohasarpro.vohasarite_wall": "Muro de Vohasarita",
+  "block.vohasarpro.vohasarite_door": "Porta de Vohasarita",
+  "block.vohasarpro.vohasarite_trapdoor": "Alçadpão de Vohasarita",
+
   "creativetab.vohasarpro.vohasar_items": "Itens de Vohasar",
   "creativetab.vohasarpro.vohasar_blocks": "Blocos de Vohasar",
 

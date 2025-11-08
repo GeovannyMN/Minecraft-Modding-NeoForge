@@ -48,6 +48,17 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.VOHASARITE_NETHER_ORE);
                                 output.accept(ModBlocks.VOHASARITE_END_ORE);
                                 output.accept(ModBlocks.MAGICAL_BLOCK);
+
+                                output.accept(ModBlocks.VOHASARITE_STAIR);
+                                output.accept(ModBlocks.VOHASARITE_SLAB);
+                                output.accept(ModBlocks.VOHASARITE_PRESSURE_PLATE);
+                                output.accept(ModBlocks.VOHASARITE_BUTTON);
+                                output.accept(ModBlocks.VOHASARITE_FENCE);
+                                output.accept(ModBlocks.VOHASARITE_FENCE_GATE);
+                                output.accept(ModBlocks.VOHASARITE_WALL);
+                                output.accept(ModBlocks.VOHASARITE_DOOR);
+                                output.accept(ModBlocks.VOHASARITE_TRAPDOOR);
+
                             }
                     )
                     .build());

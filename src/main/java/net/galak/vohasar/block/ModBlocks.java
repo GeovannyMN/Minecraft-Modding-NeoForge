@@ -7,10 +7,10 @@ import net.galak.vohasar.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -61,6 +61,70 @@ public class ModBlocks {
                     .strength(0f).requiresCorrectToolForDrops()
                     .sound(SoundType.NETHER_BRICKS)
             ));
+
+    public static final DeferredBlock<StairBlock> VOHASARITE_STAIR = registerBlock("vohasarite_stair",
+            () -> new StairBlock(ModBlocks.VOHASARITE_BLOCK.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<SlabBlock> VOHASARITE_SLAB = registerBlock("vohasarite_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<PressurePlateBlock> VOHASARITE_PRESSURE_PLATE = registerBlock("vohasarite_pressure_plate",
+            () -> new PressurePlateBlock(BlockSetType.GOLD,
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<ButtonBlock> VOHASARITE_BUTTON = registerBlock("vohasarite_button",
+            () -> new ButtonBlock(BlockSetType.GOLD, 40,
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+                            .noCollission()
+            ));
+
+    public static final DeferredBlock<FenceBlock> VOHASARITE_FENCE = registerBlock("vohasarite_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<FenceGateBlock> VOHASARITE_FENCE_GATE = registerBlock("vohasarite_fence_gate",
+            () -> new FenceGateBlock(WoodType.MANGROVE,
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<WallBlock> VOHASARITE_WALL = registerBlock("vohasarite_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<DoorBlock> VOHASARITE_DOOR = registerBlock("vohasarite_door",
+            () -> new DoorBlock(BlockSetType.GOLD,
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+            ));
+
+    public static final DeferredBlock<TrapDoorBlock> VOHASARITE_TRAPDOOR = registerBlock("vohasarite_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.GOLD,
+                    BlockBehaviour.Properties.of()
+                            .strength(1f)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()
+            ));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
