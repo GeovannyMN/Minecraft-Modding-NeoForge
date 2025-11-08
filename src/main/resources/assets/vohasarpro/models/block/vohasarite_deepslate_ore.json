@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "vohasarpro:block/vohasarite_deepslate_ore"
-  }
-}

@@ -1,6 +1,7 @@
 package net.galak.vohasar.block.custom;
 
 import net.galak.vohasar.item.ModItems;
+import net.galak.vohasar.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -36,11 +37,11 @@ public class MagicalBlock extends Block {
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity)
         {
-            if(itemEntity.getItem().getItem() == ModItems.RAW_VOHASARITE.get()){
+            if(isValidItem(itemEntity.getItem())){
                 itemEntity.setItem(new ItemStack(Items.NETHERITE_SCRAP, itemEntity.getItem().getCount()));
             }
 
-            if(itemEntity.getItem().getItem() == Items.DANDELION){
+            if(isValidItem(itemEntity.getItem())){
                 itemEntity.setItem(new ItemStack(Items.AZALEA, itemEntity.getItem().getCount()));
             }
         }
@@ -50,6 +51,10 @@ public class MagicalBlock extends Block {
             ((Player) entity).heal(5f);
         }
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item){
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
