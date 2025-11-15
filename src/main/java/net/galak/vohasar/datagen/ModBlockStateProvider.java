@@ -2,8 +2,12 @@ package net.galak.vohasar.datagen;
 
 import net.galak.vohasar.Vohasar;
 import net.galak.vohasar.block.ModBlocks;
+import net.galak.vohasar.block.custom.VohasarLampBlock;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -44,7 +48,29 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.VOHASARITE_PRESSURE_PLATE);
         blockItem(ModBlocks.VOHASARITE_FENCE_GATE);
         blockItem(ModBlocks.VOHASARITE_TRAPDOOR, "_bottom");
+
+        customLamp(ModBlocks.VOHASARITE_LAMP.get(), "vohasarite");
     }
+
+    private void customLamp(Block block,String appendix) {
+        getVariantBuilder(block).forAllStates(state -> {
+            if (state.getValue(VohasarLampBlock.CHANGED)) {
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(models().cubeAll(appendix + "_lamp_on",
+                                ResourceLocation.fromNamespaceAndPath(Vohasar.MOD_ID, "block/" + appendix + "_lamp_on")))};
+            }else{
+                return new ConfiguredModel[]{
+                        new ConfiguredModel(models().cubeAll(appendix + "_lamp_off",
+                                ResourceLocation.fromNamespaceAndPath(Vohasar.MOD_ID, "block/" + appendix + "_lamp_off")))};
+            }
+        }
+        );
+
+        simpleBlockItem(block, models().cubeAll(appendix + "_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(Vohasar.MOD_ID, "block/" + appendix + "_lamp_on")
+        ));
+    }
+
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));

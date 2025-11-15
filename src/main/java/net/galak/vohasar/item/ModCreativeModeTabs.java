@@ -59,6 +59,8 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.VOHASARITE_DOOR);
                                 output.accept(ModBlocks.VOHASARITE_TRAPDOOR);
 
+                                output.accept(ModBlocks.VOHASARITE_LAMP);
+
                             }
                     )
                     .build());

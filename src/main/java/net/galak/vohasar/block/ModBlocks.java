@@ -3,6 +3,7 @@ package net.galak.vohasar.block;
 
 import net.galak.vohasar.Vohasar;
 import net.galak.vohasar.block.custom.MagicalBlock;
+import net.galak.vohasar.block.custom.VohasarLampBlock;
 import net.galak.vohasar.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -125,6 +126,11 @@ public class ModBlocks {
                             .noOcclusion()
             ));
 
+    public static final DeferredBlock<Block> VOHASARITE_LAMP = registerBlock("vohasarite_lamp",
+            () -> new VohasarLampBlock(BlockBehaviour.Properties.of().strength(1f)
+                    .requiresCorrectToolForDrops().lightLevel(
+                            state -> state.getValue(VohasarLampBlock.CHANGED) ? 13 : 0)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {

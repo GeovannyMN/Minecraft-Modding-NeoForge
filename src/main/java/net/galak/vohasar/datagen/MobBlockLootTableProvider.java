@@ -61,6 +61,8 @@ public class MobBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.VOHASARITE_END_ORE.get(),
                 block -> createMultipleOreDrop(ModBlocks.VOHASARITE_END_ORE.get(),
                         ModItems.RAW_VOHASARITE.get(), 8, 12));
+
+        dropSelf(ModBlocks.VOHASARITE_LAMP.get());
     }
 
     protected LootTable.Builder createMultipleOreDrop(Block block, Item item, float minDrops, float maxDrops){

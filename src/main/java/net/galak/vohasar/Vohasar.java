@@ -3,7 +3,6 @@ package net.galak.vohasar;
 import net.galak.vohasar.block.ModBlocks;
 import net.galak.vohasar.item.ModCreativeModeTabs;
 import net.galak.vohasar.item.ModItems;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
