@@ -1,9 +1,11 @@
 package net.galak.vohasar.block.custom;
 
 import net.galak.vohasar.item.ModItems;
+import net.galak.vohasar.particle.ModParticles;
 import net.galak.vohasar.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
@@ -29,6 +31,10 @@ public class MagicalBlock extends Block {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
         level.playSound(player, pos, SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.BLOCKS, 1f, 1f);
+
+        level.addParticle(ModParticles.VOHASAR_PARTICLES.get(),
+                pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5,
+                0, 1, 0);
 
         return InteractionResult.SUCCESS;
     }

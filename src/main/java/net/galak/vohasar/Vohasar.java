@@ -3,12 +3,17 @@ package net.galak.vohasar;
 import net.galak.vohasar.block.ModBlocks;
 import net.galak.vohasar.item.ModCreativeModeTabs;
 import net.galak.vohasar.item.ModItems;
+import net.galak.vohasar.particle.ModParticles;
+import net.galak.vohasar.particle.VohasarParticles;
+import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -37,6 +42,8 @@ public class Vohasar {
 
         ModBlocks.register(modEventBus);
 
+        ModParticles.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -57,4 +64,14 @@ public class Vohasar {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
+    @SuppressWarnings("removal")
+    @EventBusSubscriber(modid = MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents{
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event){
+            event.registerSpriteSet(ModParticles.VOHASAR_PARTICLES.get(), VohasarParticles.Provider::new);
+        }
+    }
+
 }

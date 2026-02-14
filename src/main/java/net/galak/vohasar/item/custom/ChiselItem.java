@@ -1,7 +1,11 @@
 package net.galak.vohasar.item.custom;
 
 import net.galak.vohasar.block.ModBlocks;
+import net.galak.vohasar.particle.ModParticles;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -18,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
 
 public class ChiselItem extends Item {
     private static final Map<Block, Block> CHISEL_MAP =
@@ -38,7 +43,8 @@ public class ChiselItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
-        Block block = level.getBlockState(context.getClickedPos()).getBlock();
+        BlockPos clicked = context.getClickedPos();
+        Block block = level.getBlockState(clicked).getBlock();
 
         if (CHISEL_MAP.containsKey(block))
         {
@@ -51,6 +57,15 @@ public class ChiselItem extends Item {
                         item->context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null, context.getClickedPos(), SoundEvents.SMITHING_TABLE_USE, SoundSource.BLOCKS);
+
+                ((ServerLevel) level).sendParticles(
+                        ModParticles.VOHASAR_PARTICLES.get(),
+                        context.getClickedPos().getX() + 0.5,
+                        context.getClickedPos().getY() + 1.0,
+                        context.getClickedPos().getZ() + 0.5,
+                        5, 0 , 0, 0, 3
+                );
+
             }
         }
 
