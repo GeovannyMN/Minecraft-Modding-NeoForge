@@ -3,6 +3,7 @@ package net.galak.vohasar;
 import net.galak.vohasar.block.ModBlocks;
 import net.galak.vohasar.item.ModCreativeModeTabs;
 import net.galak.vohasar.item.ModItems;
+import net.galak.vohasar.loot.ModLootModifiers;
 import net.galak.vohasar.particle.ModParticles;
 import net.galak.vohasar.particle.VohasarParticles;
 import net.neoforged.api.distmarker.Dist;
@@ -43,6 +44,8 @@ public class Vohasar {
         ModBlocks.register(modEventBus);
 
         ModParticles.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
