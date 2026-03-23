@@ -1,6 +1,8 @@
 package net.galak.vohasar;
 
 import net.galak.vohasar.block.ModBlocks;
+import net.galak.vohasar.enchantment.ModEnchantmentEffects;
+import net.galak.vohasar.enchantment.ModEnchantments;
 import net.galak.vohasar.item.ModCreativeModeTabs;
 import net.galak.vohasar.item.ModItems;
 import net.galak.vohasar.loot.ModLootModifiers;
@@ -46,6 +48,8 @@ public class Vohasar {
         ModParticles.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
