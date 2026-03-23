@@ -23,12 +23,14 @@
   "block.vohasarpro.vohasarite_fence_gate": "Portão de Vohasarita",
   "block.vohasarpro.vohasarite_wall": "Muro de Vohasarita",
   "block.vohasarpro.vohasarite_door": "Porta de Vohasarita",
-  "block.vohasarpro.vohasarite_trapdoor": "Alçadpão de Vohasarita",
+  "block.vohasarpro.vohasarite_trapdoor": "Alçapão de Vohasarita",
 
   "block.vohasarpro.vohasarite_lamp": "Lâmpada de Vohasarita",
 
   "creativetab.vohasarpro.vohasar_items": "Itens de Vohasar",
   "creativetab.vohasarpro.vohasar_blocks": "Blocos de Vohasar",
+
+  "enchantment.vohasarpro.explosion": "Explosão",
 
   "tooltip.vohasarpro.magical_block.tooltip": "Um bloco realmente §9MÁGICO§r",
   "tooltip.vohasarpro.chisel": "Um item para §6MUDAR§r outros! Pressione §eShift§r para ver mais informação",
