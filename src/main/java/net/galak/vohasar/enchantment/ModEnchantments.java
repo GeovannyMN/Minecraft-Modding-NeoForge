@@ -25,9 +25,9 @@ public class ModEnchantments {
                 items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                 items.getOrThrow(ItemTags.SWORD_ENCHANTABLE),
                 5,
-                2,
+                5,
                 Enchantment.dynamicCost(3,5),
-                Enchantment.dynamicCost(8, 4),
+                Enchantment.dynamicCost(23, 5),
                 2,
                 EquipmentSlotGroup.MAINHAND
         ))

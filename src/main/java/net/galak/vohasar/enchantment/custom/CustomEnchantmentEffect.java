@@ -16,10 +16,10 @@ public record CustomEnchantmentEffect () implements EnchantmentEntityEffect {
     public void apply(ServerLevel serverLevel, int enchantLevel, EnchantedItemInUse enchantedItemInUse, Entity entity, Vec3 vec3) {
         if (enchantLevel == 1)
         {
-            EntityType.WIND_CHARGE.spawn(serverLevel, entity.getOnPos(), MobSpawnType.TRIGGERED);
+            EntityType.LIGHTNING_BOLT.spawn(serverLevel, entity.getOnPos(), MobSpawnType.TRIGGERED);
         }else{
             for (int i = 0; i < enchantLevel; i++) {
-                EntityType.WIND_CHARGE.spawn(serverLevel, entity.getOnPos(), MobSpawnType.TRIGGERED);
+                EntityType.LIGHTNING_BOLT.spawn(serverLevel, entity.getOnPos(), MobSpawnType.TRIGGERED);
             }
         }
     }
